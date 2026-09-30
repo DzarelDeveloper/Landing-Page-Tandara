@@ -1,0 +1,6 @@
+{
+  "name": "TANDARA — Absensi Wajah",
+  "description": "Sistem absensi digital modern berbasis pengenalan wajah untuk sekolah, perkantoran, dan organisasi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
