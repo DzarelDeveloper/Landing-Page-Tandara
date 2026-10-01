@@ -79,13 +79,13 @@ export const FeaturesBentoSection: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-2xl mb-12">
           <div className="text-xs font-semibold text-indigo-600 tracking-wider uppercase mb-2">
-            FITUR LENGKAP
+            YANG BEKERJA DI BALIK LAYAR
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
-            Kemampuan Utama Sistem Tandara
+            Semua yang dibutuhkan sekolah untuk menjaga kehadiran tetap tertib.
           </h2>
           <p className="text-sm sm:text-base text-slate-600 mt-2">
-            Setiap fitur dirancang khusus untuk memecahkan kendala presensi nyata di lingkungan sekolah.
+            Mulai dari deteksi wajah hingga laporan dan kontrol akses, setiap bagian bekerja dalam satu alur yang mudah dipantau.
           </p>
         </div>
 

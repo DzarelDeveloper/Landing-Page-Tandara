@@ -7,6 +7,7 @@ export const ContactSection: React.FC = () => {
     name: '',
     email: '',
     institution: '',
+    purpose: '',
     message: '',
   });
 
@@ -28,10 +29,10 @@ export const ContactSection: React.FC = () => {
             KONTAK
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
-            Hubungi Tim TANDARA
+            Mari rancang alur presensi yang sesuai kebutuhan sekolah.
           </h2>
           <p className="text-sm sm:text-base text-slate-600 mt-2">
-            Punya pertanyaan mengenai implementasi, penyiapan terminal, atau presentasi teknis? Kami siap membantu.
+            Ceritakan skala institusi, kebutuhan perangkat, atau rencana pilot project. Tim kami akan menghubungi Anda untuk membahas langkah berikutnya.
           </p>
         </div>
 
@@ -98,7 +99,7 @@ export const ContactSection: React.FC = () => {
                   type="button"
                   onClick={() => {
                     setFormSubmitted(false);
-                    setFormData({ name: '', email: '', institution: '', message: '' });
+                    setFormData({ name: '', email: '', institution: '', purpose: '', message: '' });
                   }}
                   className="mt-2 text-xs font-semibold text-indigo-600 hover:text-indigo-800"
                 >
@@ -148,6 +149,23 @@ export const ContactSection: React.FC = () => {
                     placeholder="Contoh: SMA Negeri 1 / PT Sukses Bersama"
                     className="w-full px-3 py-2 text-xs bg-white border border-slate-200 rounded-lg text-slate-900 focus:outline-none focus:border-indigo-600"
                   />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-slate-700 mb-1">
+                    Kebutuhan Anda
+                  </label>
+                  <select
+                    value={formData.purpose}
+                    onChange={(e) => setFormData({ ...formData, purpose: e.target.value })}
+                    className="w-full px-3 py-2 text-xs bg-white border border-slate-200 rounded-lg text-slate-900 focus:outline-none focus:border-indigo-600"
+                  >
+                    <option value="">Pilih kebutuhan</option>
+                    <option value="demo">Minta demo sistem</option>
+                    <option value="pilot">Pilot project sekolah</option>
+                    <option value="integrasi">Konsultasi integrasi</option>
+                    <option value="lainnya">Pertanyaan lainnya</option>
+                  </select>
                 </div>
 
                 <div>

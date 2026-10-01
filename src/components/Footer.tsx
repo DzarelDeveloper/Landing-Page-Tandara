@@ -135,8 +135,8 @@ export const Footer: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="#beranda"
-                    onClick={(e) => handleNavClick(e, '#beranda')}
+                    href="#keamanan"
+                    onClick={(e) => handleNavClick(e, '#keamanan')}
                     className="hover:text-indigo-600 transition-colors"
                   >
                     Privasi Data

@@ -11,7 +11,7 @@ export const Navbar: React.FC = () => {
       setIsScrolled(window.scrollY > 20);
 
       // Simple active link spy
-      const sections = ['beranda', 'cara-kerja', 'ekosistem', 'fitur', 'kontak'];
+      const sections = ['beranda', 'cara-kerja', 'ekosistem', 'fitur', 'keamanan', 'kontak'];
       const scrollPosition = window.scrollY + 100;
 
       for (const sectionId of sections) {
@@ -36,6 +36,7 @@ export const Navbar: React.FC = () => {
     { label: 'Cara Kerja', href: '#cara-kerja', id: 'cara-kerja' },
     { label: 'Ekosistem', href: '#ekosistem', id: 'ekosistem' },
     { label: 'Fitur', href: '#fitur', id: 'fitur' },
+    { label: 'Keamanan', href: '#keamanan', id: 'keamanan' },
     { label: 'Kontak', href: '#kontak', id: 'kontak' },
   ];
 

@@ -1,6 +1,6 @@
 {
   "name": "TANDARA — Absensi Wajah",
-  "description": "Sistem absensi digital modern berbasis pengenalan wajah untuk sekolah, perkantoran, dan organisasi.",
+  "description": "Landing page TANDARA, sistem kehadiran sekolah berbasis pengenalan wajah dengan dashboard terintegrasi dan kontrol data yang jelas.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

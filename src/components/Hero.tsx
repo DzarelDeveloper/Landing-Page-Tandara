@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Hero3DScanner } from './Hero3DScanner';
 
 export const Hero: React.FC = () => {
@@ -20,7 +20,7 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section id="beranda" className="pt-28 pb-16 md:pt-36 md:pb-24 bg-white/70 backdrop-blur-[1px] border-b border-slate-200/80 relative overflow-hidden">
+    <section id="beranda" className="hero-section pt-28 pb-16 md:pt-36 md:pb-24 relative overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -29,21 +29,21 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-6 space-y-6 text-left">
             
             {/* Eyebrow */}
-            <div className="text-xs font-semibold text-indigo-600 tracking-wider uppercase font-mono">
-              TANDARA · EKOSISTEM PRESENSI WAJAH SEKOLAH
+            <div className="section-kicker">
+              TANDARA · SISTEM KEHADIRAN SEKOLAH
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-bold text-slate-900 tracking-tight leading-[1.12]">
-              Presensi Sekolah,<br />
+              Presensi sekolah otomatis,<br />
               <span className="text-indigo-600">
-                Lebih Cerdas dengan Wajah.
+                tanpa antrean dan rekap manual.
               </span>
             </h1>
 
             {/* Supporting Copy */}
             <p className="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
-              Tandara menghubungkan siswa, guru, sekolah, dan orang tua melalui sistem presensi wajah yang cepat dan terintegrasi.
+              Satu sistem untuk mendeteksi kehadiran siswa, membantu guru memantau kelas, dan mengirim kepastian kepada orang tua secara real-time.
             </p>
 
             {/* Tombol CTA */}
@@ -53,7 +53,8 @@ export const Hero: React.FC = () => {
                 onClick={scrollToEcosystem}
                 className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 rounded-lg shadow-xs transition-colors cursor-pointer"
               >
-                <span>Jelajahi Tandara</span>
+                <span>Jadwalkan Demo</span>
+                <ArrowRight className="w-4 h-4" />
               </a>
 
               <a
@@ -66,18 +67,18 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Value Highlights */}
-            <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center gap-6 text-xs text-slate-500 font-medium">
+            <div className="pt-5 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-slate-600 font-medium">
               <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                <span>Tanpa Antrean Gerbang</span>
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span><strong className="block text-slate-900">&lt;1 detik</strong> verifikasi</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
-                <span>Notifikasi Otomatis ke Ortu</span>
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span><strong className="block text-slate-900">Real-time</strong> ke orang tua</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                <span>Rekap Terpusat untuk Guru</span>
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span><strong className="block text-slate-900">On-premise</strong> siap sekolah</span>
               </div>
             </div>
 
@@ -95,7 +96,7 @@ export const Hero: React.FC = () => {
       {/* Down indicator */}
       <div className="mt-12 flex justify-center">
         <a
-          href="#statement"
+          href="#cara-kerja"
           className="text-slate-400 hover:text-indigo-600 transition-colors p-2"
           aria-label="Scroll ke pernyataan produk"
         >

@@ -10,6 +10,7 @@ import { ProductStatementSection } from './components/ProductStatementSection.ts
 import { EcosystemSection } from './components/EcosystemSection.tsx';
 import { FeaturesBentoSection } from './components/FeaturesBentoSection.tsx';
 import { WhyTandaraSection } from './components/WhyTandaraSection.tsx';
+import { SecuritySection } from './components/SecuritySection.tsx';
 import { FinalCtaSection } from './components/FinalCtaSection.tsx';
 import { ContactSection } from './components/ContactSection.tsx';
 import { Footer } from './components/Footer.tsx';
@@ -21,10 +22,10 @@ export default function App() {
       
       {/* 3D Geometric Architectural Diamond Relief Texture Layer (Fixed across entire site) */}
       <div
-        className="fixed inset-0 pointer-events-none z-0 opacity-85 bg-repeat"
+        className="fixed inset-0 pointer-events-none z-0 opacity-30 bg-repeat"
         style={{
           backgroundImage: `url(${white3dTexture})`,
-          backgroundSize: '720px auto',
+          backgroundSize: '920px auto',
           backgroundPosition: 'center top',
         }}
       />
@@ -49,10 +50,13 @@ export default function App() {
         {/* 05 — PERBANDINGAN ALUR KERJA: Presensi Manual vs Ekosistem Tandara */}
         <WhyTandaraSection />
 
-        {/* 06 — FINAL CTA: Action Call to Request Consultation */}
+        {/* 06 — KEAMANAN & PRIVASI: Kontrol data untuk sekolah */}
+        <SecuritySection />
+
+        {/* 07 — FINAL CTA: Action Call to Request Consultation */}
         <FinalCtaSection />
 
-        {/* 07 — KONTAK: Form Konsultasi & Kemitraan Sekolah */}
+        {/* 08 — KONTAK: Form Konsultasi & Kemitraan Sekolah */}
         <ContactSection />
       </main>
 

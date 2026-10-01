@@ -8,17 +8,17 @@ export const ProductStatementSection: React.FC = () => {
         
         <div className="max-w-3xl mx-auto text-center space-y-5">
           
-          <div className="text-xs font-mono font-medium text-indigo-400 tracking-wider uppercase">
-            EKOSISTEM PRESENSI TERPADU
+          <div className="section-kicker section-kicker-light">
+            DARI GERBANG KE ORANG TUA
           </div>
 
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-[1.2]">
-            Satu wajah. Satu proses.<br />
-            <span className="text-indigo-400">Seluruh sistem terhubung.</span>
+            Satu kejadian presensi.<br />
+            <span className="text-indigo-400">Tiga pihak langsung tahu.</span>
           </h2>
 
           <p className="text-xs sm:text-base text-slate-300 max-w-xl mx-auto leading-relaxed">
-            Dari gerbang sekolah hingga informasi ke orang tua, Tandara membuat proses presensi berjalan dalam satu ekosistem yang praktis dan tenang.
+            Begitu wajah terverifikasi di gerbang, data langsung mengalir ke dashboard sekolah dan notifikasi orang tua tanpa rekap tambahan.
           </p>
 
           {/* Alur Horizontal Kompak di Mobile & Desktop - Pas di Layar Tanpa Perlu Digeser */}
