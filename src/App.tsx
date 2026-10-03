@@ -7,10 +7,12 @@ import React from 'react';
 import { Navbar } from './components/Navbar.tsx';
 import { Hero } from './components/Hero.tsx';
 import { ProductStatementSection } from './components/ProductStatementSection.tsx';
+import { BrandMeaningSection } from './components/BrandMeaningSection.tsx';
 import { EcosystemSection } from './components/EcosystemSection.tsx';
 import { FeaturesBentoSection } from './components/FeaturesBentoSection.tsx';
 import { WhyTandaraSection } from './components/WhyTandaraSection.tsx';
 import { SecuritySection } from './components/SecuritySection.tsx';
+import { TeamSection } from './components/TeamSection.tsx';
 import { FinalCtaSection } from './components/FinalCtaSection.tsx';
 import { ContactSection } from './components/ContactSection.tsx';
 import { Footer } from './components/Footer.tsx';
@@ -41,22 +43,28 @@ export default function App() {
         {/* 02 — PRODUCT STATEMENT: Satu wajah. Satu proses. Seluruh sistem terhubung. */}
         <ProductStatementSection />
 
-        {/* 03 — EKOSISTEM TIGA PILAR: Admin IT (Desktop), Guru Piket (Desktop), Orang Tua (Mobile) */}
+        {/* 03 — FILOSOFI NAMA TANDARA */}
+        <BrandMeaningSection />
+
+        {/* 04 — EKOSISTEM TIGA PILAR: Admin IT (Desktop), Guru Piket (Desktop), Orang Tua (Mobile) */}
         <EcosystemSection />
 
-        {/* 04 — FITUR UTAMA: Clean Bento Grid Layout */}
+        {/* 05 — FITUR UTAMA: Clean Bento Grid Layout */}
         <FeaturesBentoSection />
 
-        {/* 05 — PERBANDINGAN ALUR KERJA: Presensi Manual vs Ekosistem Tandara */}
+        {/* 06 — PERBANDINGAN ALUR KERJA: Presensi Manual vs Ekosistem Tandara */}
         <WhyTandaraSection />
 
-        {/* 06 — KEAMANAN & PRIVASI: Kontrol data untuk sekolah */}
+        {/* 07 — KEAMANAN & PRIVASI: Kontrol data untuk sekolah */}
         <SecuritySection />
 
-        {/* 07 — FINAL CTA: Action Call to Request Consultation */}
+        {/* 08 — TIM: Orang di balik TANDARA */}
+        <TeamSection />
+
+        {/* 09 — FINAL CTA: Action Call to Request Consultation */}
         <FinalCtaSection />
 
-        {/* 08 — KONTAK: Form Konsultasi & Kemitraan Sekolah */}
+        {/* 10 — KONTAK: Form Konsultasi & Kemitraan Sekolah */}
         <ContactSection />
       </main>
 

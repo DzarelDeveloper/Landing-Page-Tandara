@@ -52,24 +52,24 @@ export const LiveExperienceSection: React.FC = () => {
     // Phase 1: entering (800ms)
     setPhase('entering');
     const t1 = setTimeout(() => {
-      // Phase 2: verifying (1200ms)
+      // Phase 2: verifying (5 seconds)
       setPhase('verifying');
     }, 800);
 
     const t2 = setTimeout(() => {
-      // Phase 3: success (1600ms)
+      // Phase 3: success
       setPhase('success');
       setRecentLogs((prev) => {
         const exists = prev.some((s) => s.id === currentStudent.id);
         if (exists) return prev;
         return [currentStudent, ...prev.slice(0, 4)];
       });
-    }, 2000);
+    }, 5800);
 
     const t3 = setTimeout(() => {
       // Advance to next student
       setCurrentIndex((prev) => (prev + 1) % students.length);
-    }, 4500);
+    }, 8300);
 
     return () => {
       clearTimeout(t1);
@@ -91,7 +91,7 @@ export const LiveExperienceSection: React.FC = () => {
             Presensi Otomatis di Gerbang Sekolah
           </h2>
           <p className="text-sm sm:text-base text-slate-600 mt-2">
-            Siswa cukup melangkah menuju gerbang. Kamera mendeteksi wajah, memverifikasi biometrik dalam hitungan milidetik, dan langsung menyinkronkan data ke guru serta orang tua.
+            Siswa cukup melangkah menuju gerbang. Kamera mendeteksi wajah dan memverifikasi biometrik dalam sekitar 5 detik, lalu menyinkronkan data ke guru serta orang tua.
           </p>
         </div>
 

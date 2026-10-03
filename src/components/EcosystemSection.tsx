@@ -8,10 +8,6 @@ import {
   Maximize2
 } from 'lucide-react';
 
-import adminDesktopImg from '../assets/images/admin_desktop_screenshot_1790730666590.jpg';
-import guruDesktopImg from '../assets/images/guru_desktop_screenshot_1790730681819.jpg';
-import ortuMobileImg from '../assets/images/ortu_mobile_screenshot_1790730696195.jpg';
-
 export const EcosystemSection: React.FC = () => {
   const [activeRole, setActiveRole] = useState<'admin' | 'guru' | 'ortu'>('admin');
 
@@ -229,11 +225,11 @@ export const EcosystemSection: React.FC = () => {
                 </div>
 
                 {/* Screenshot Image */}
-                <div className="relative bg-slate-50 aspect-16/9 overflow-hidden">
+                <div className="relative bg-slate-50">
                   <img
-                    src={adminDesktopImg}
+                    src="/img/admin.png"
                     alt="Tandara Admin IT Desktop Dashboard Screenshot"
-                    className="w-full h-full object-cover object-top hover:scale-[1.02] transition-transform duration-300"
+                    className="block h-auto w-full"
                     loading="lazy"
                   />
                 </div>
@@ -258,11 +254,11 @@ export const EcosystemSection: React.FC = () => {
                 </div>
 
                 {/* Screenshot Image */}
-                <div className="relative bg-slate-50 aspect-16/9 overflow-hidden">
+                <div className="relative bg-slate-50">
                   <img
-                    src={guruDesktopImg}
+                    src="/img/guru.png"
                     alt="Tandara Guru / Piket Desktop Dashboard Screenshot"
-                    className="w-full h-full object-cover object-top hover:scale-[1.02] transition-transform duration-300"
+                    className="block h-auto w-full"
                     loading="lazy"
                   />
                 </div>
@@ -271,22 +267,17 @@ export const EcosystemSection: React.FC = () => {
 
             {/* 3. MOCKUP SMARTPHONE ORANG TUA (REAL MOBILE SCREENSHOT) */}
             {activeRole === 'ortu' && (
-              <div className="max-w-[290px] mx-auto bg-slate-900 rounded-[44px] p-3 shadow-2xl border-4 border-slate-800 animate-in zoom-in-95 duration-200">
-                {/* Phone Top Dynamic Island */}
-                <div className="w-24 h-4 bg-slate-950 rounded-full mx-auto mb-2" />
-
-                {/* Smartphone Screenshot Image */}
-                <div className="rounded-[32px] overflow-hidden bg-white aspect-9/16 shadow-inner">
-                  <img
-                    src={ortuMobileImg}
-                    alt="Tandara Mobile App Screenshot for Parents"
-                    className="w-full h-full object-cover object-top hover:scale-[1.02] transition-transform duration-300"
-                    loading="lazy"
-                  />
+              <div className="relative mx-auto w-full max-w-[292px] animate-in fade-in duration-200">
+                <div className="rounded-[2.75rem] border-[7px] border-[#17263b] bg-[#081426] p-[7px] shadow-[0_18px_38px_rgba(15,23,42,0.2)]">
+                  <div className="relative aspect-[770/1525] overflow-hidden rounded-[2.2rem] bg-[#081426]">
+                    <img
+                      src="/img/android.jpeg"
+                      alt="Tampilan aplikasi Android Tandara untuk orang tua"
+                      className="absolute inset-0 h-full w-full object-contain"
+                    />
+                  </div>
                 </div>
-
-                {/* Bottom Home Indicator Bar */}
-                <div className="w-28 h-1 bg-slate-700 rounded-full mx-auto mt-2" />
+                <span aria-hidden="true" className="absolute -right-[9px] top-32 h-12 w-[3px] rounded-r bg-slate-600" />
               </div>
             )}
 

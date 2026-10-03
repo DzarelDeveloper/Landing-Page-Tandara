@@ -1,6 +1,5 @@
 import React from 'react';
-import { ArrowDown, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { Hero3DScanner } from './Hero3DScanner';
+import { ArrowRight, Bell, Database, Scan } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   const scrollToHowItWorks = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -20,38 +19,42 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section id="beranda" className="hero-section pt-28 pb-16 md:pt-36 md:pb-24 relative overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          {/* Kolom Kiri: Teks & Aksi */}
-          <div className="lg:col-span-6 space-y-6 text-left">
-            
-            {/* Eyebrow */}
-            <div className="section-kicker">
-              TANDARA · SISTEM KEHADIRAN SEKOLAH
-            </div>
+    <section id="beranda" className="hero-section relative overflow-hidden py-16 sm:py-20 lg:py-24">
+      <div className="relative z-10 mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden xl:block">
+          <div className="absolute left-0 top-[120px] inline-flex -rotate-6 items-center gap-2 rounded-md border border-slate-200 bg-white/90 px-3 py-2 text-[11px] font-semibold text-slate-600 shadow-sm">
+            <Scan className="h-4 w-4 text-indigo-600" />
+            Pengenalan wajah
+          </div>
+          <div className="absolute right-0 top-[170px] inline-flex rotate-3 items-center gap-2 rounded-md border border-slate-200 bg-white/90 px-3 py-2 text-[11px] font-semibold text-slate-600 shadow-sm">
+            <Bell className="h-4 w-4 text-indigo-600" />
+            Notifikasi wali
+          </div>
+          <div className="absolute left-5 top-[315px] inline-flex rotate-3 items-center gap-2 rounded-md border border-slate-200 bg-white/90 px-3 py-2 text-[11px] font-semibold text-slate-600 shadow-sm">
+            <Database className="h-4 w-4 text-indigo-600" />
+            Data sekolah
+          </div>
+        </div>
 
-            {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-bold text-slate-900 tracking-tight leading-[1.12]">
-              Presensi sekolah otomatis,<br />
-              <span className="text-indigo-600">
-                tanpa antrean dan rekap manual.
-              </span>
-            </h1>
+        <div className="relative mx-auto max-w-[920px] text-center">
+          <div className="section-kicker mb-4">
+            TANDARA · SISTEM KEHADIRAN SEKOLAH
+          </div>
 
-            {/* Supporting Copy */}
-            <p className="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
-              Satu sistem untuk mendeteksi kehadiran siswa, membantu guru memantau kelas, dan mengirim kepastian kepada orang tua secara real-time.
-            </p>
+          <h1 className="mx-auto mb-5 text-[36px] font-bold leading-[1.08] text-slate-900 sm:text-[42px] lg:text-[46px] xl:text-[50px] 2xl:text-[52px]">
+            Presensi sekolah otomatis,<br className="hidden xl:block" />
+            <span className="text-indigo-700">tanpa antrean dan rekap manual.</span>
+          </h1>
 
-            {/* Tombol CTA */}
-            <div className="flex flex-wrap items-center gap-3 pt-2">
+          <p className="mx-auto mb-7 max-w-[640px] text-base leading-7 text-slate-600 sm:text-lg">
+            Satu sistem untuk mendeteksi kehadiran siswa, membantu guru memantau kelas, dan mengirim kepastian kepada orang tua secara real-time.
+          </p>
+
+          <div className="flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
               <a
                 href="#ekosistem"
                 onClick={scrollToEcosystem}
-                className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 rounded-lg shadow-xs transition-colors cursor-pointer"
+                className="inline-flex h-[50px] w-full items-center justify-center gap-2 rounded-lg bg-indigo-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-indigo-700 active:bg-indigo-800 sm:w-auto"
               >
                 <span>Jadwalkan Demo</span>
                 <ArrowRight className="w-4 h-4" />
@@ -60,50 +63,28 @@ export const Hero: React.FC = () => {
               <a
                 href="#cara-kerja"
                 onClick={scrollToHowItWorks}
-                className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold text-slate-700 hover:text-slate-900 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg shadow-xs transition-colors cursor-pointer"
+                className="inline-flex h-[50px] w-full items-center justify-center rounded-lg border border-slate-300 bg-white px-6 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-50 hover:text-slate-900 sm:w-auto"
               >
                 <span>Lihat Cara Kerja</span>
               </a>
-            </div>
-
-            {/* Value Highlights */}
-            <div className="pt-5 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-slate-600 font-medium">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span><strong className="block text-slate-900">&lt;1 detik</strong> verifikasi</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span><strong className="block text-slate-900">Real-time</strong> ke orang tua</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span><strong className="block text-slate-900">On-premise</strong> siap sekolah</span>
-              </div>
-            </div>
-
           </div>
 
-          {/* Kolom Kanan: Terminal Presensi Interaktif Cerdas */}
-          <div className="flex lg:col-span-6 justify-center w-full mt-8 lg:mt-0">
-            <Hero3DScanner />
+          <div className="mx-auto mt-9 grid max-w-[780px] grid-cols-3 gap-2.5 sm:gap-3">
+            <div className="rounded-lg border border-slate-200 bg-white/85 px-2 py-3 shadow-sm sm:px-4 sm:py-4">
+              <strong className="block text-base font-bold text-slate-900 sm:text-xl">~5 detik</strong>
+              <span className="mt-1 block text-[10px] font-medium text-slate-500 sm:text-xs">Verifikasi wajah</span>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-white/85 px-2 py-3 shadow-sm sm:px-4 sm:py-4">
+              <strong className="block text-base font-bold text-slate-900 sm:text-xl">Real-time</strong>
+              <span className="mt-1 block text-[10px] font-medium text-slate-500 sm:text-xs">Info ke orang tua</span>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-white/85 px-2 py-3 shadow-sm sm:px-4 sm:py-4">
+              <strong className="block text-base font-bold text-slate-900 sm:text-xl">On-premise</strong>
+              <span className="mt-1 block text-[10px] font-medium text-slate-500 sm:text-xs">Data di sekolah</span>
+            </div>
           </div>
-
         </div>
-
       </div>
-
-      {/* Down indicator */}
-      <div className="mt-12 flex justify-center">
-        <a
-          href="#cara-kerja"
-          className="text-slate-400 hover:text-indigo-600 transition-colors p-2"
-          aria-label="Scroll ke pernyataan produk"
-        >
-          <ArrowDown className="w-4 h-4 animate-bounce" />
-        </a>
-      </div>
-
     </section>
   );
 };

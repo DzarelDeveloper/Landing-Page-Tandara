@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Shield, PhoneCall } from 'lucide-react';
+import { Menu, X, PhoneCall } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -11,7 +11,7 @@ export const Navbar: React.FC = () => {
       setIsScrolled(window.scrollY > 20);
 
       // Simple active link spy
-      const sections = ['beranda', 'cara-kerja', 'ekosistem', 'fitur', 'keamanan', 'kontak'];
+      const sections = ['beranda', 'cara-kerja', 'ekosistem', 'fitur', 'keamanan', 'tim', 'kontak'];
       const scrollPosition = window.scrollY + 100;
 
       for (const sectionId of sections) {
@@ -37,6 +37,7 @@ export const Navbar: React.FC = () => {
     { label: 'Ekosistem', href: '#ekosistem', id: 'ekosistem' },
     { label: 'Fitur', href: '#fitur', id: 'fitur' },
     { label: 'Keamanan', href: '#keamanan', id: 'keamanan' },
+    { label: 'Tim', href: '#tim', id: 'tim' },
     { label: 'Kontak', href: '#kontak', id: 'kontak' },
   ];
 
@@ -65,15 +66,17 @@ export const Navbar: React.FC = () => {
           onClick={(e) => handleNavClick(e, '#beranda')}
           className="flex items-center gap-2.5 group"
         >
-          <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white shadow-xs">
-            <Shield className="w-4 h-4 stroke-[2.4]" />
-          </div>
+          <img
+            src="/tandara-logo.jpeg"
+            alt="Tandara"
+            className="h-9 w-9 rounded-lg object-cover"
+          />
           <div className="flex flex-col">
             <span className="text-base font-bold tracking-tight text-slate-900 leading-none">
               TANDARA
             </span>
             <span className="text-[10px] font-medium text-slate-500 tracking-normal mt-0.5">
-              Smart School Attendance
+              Presensi Wajah Sekolah
             </span>
           </div>
         </a>

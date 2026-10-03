@@ -30,7 +30,7 @@ export const FinalCtaSection: React.FC = () => {
           </h2>
 
           <p className="text-sm sm:text-base text-slate-300 max-w-lg mx-auto leading-relaxed">
-            Ceritakan kebutuhan sekolah Anda. Tim Tandara akan membantu memetakan alur, perangkat, dan skenario pilot project yang paling sesuai.
+            Ceritakan kebutuhan sekolah Anda. Tim Kena Scan akan membantu memetakan alur, perangkat, dan skenario pilot project yang paling sesuai untuk Tandara.
           </p>
 
           {/* CTAs: Hubungi Kami & Pelajari Alur */}

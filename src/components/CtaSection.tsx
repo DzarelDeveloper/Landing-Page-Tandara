@@ -34,7 +34,7 @@ export const CtaSection: React.FC<CtaSectionProps> = ({ onOpenDemo }) => {
               href="#kontak"
               className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors cursor-pointer"
             >
-              Hubungi Tim TANDARA
+              Hubungi Tim Kena Scan
             </a>
           </div>
         </div>

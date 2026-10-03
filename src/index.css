@@ -36,9 +36,7 @@
 }
 
 .hero-section {
-  background:
-    radial-gradient(circle at 86% 18%, rgba(98, 111, 224, 0.14), transparent 30%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(237, 244, 244, 0.88));
+  background-color: #f5f7f8;
   border-bottom: 1px solid rgba(148, 163, 184, 0.28);
 }
 
@@ -79,4 +77,33 @@
 .animate-scan-line {
   position: absolute;
   animation: scanLineAnim 1.4s ease-in-out infinite alternate;
+}
+
+@keyframes philosophyReveal {
+  from {
+    opacity: 0.9;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.philosophy-reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.philosophy-reveal.is-visible {
+  animation: philosophyReveal 650ms ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .philosophy-reveal,
+  .philosophy-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
 }

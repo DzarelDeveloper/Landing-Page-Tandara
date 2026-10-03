@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -20,9 +20,11 @@ export const Footer: React.FC = () => {
           {/* Kolom Kiri: Brand & Social */}
           <div className="space-y-4 max-w-sm">
             <div className="flex items-center gap-2.5">
-              <div className="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center text-white shadow-xs">
-                <Shield className="w-4 h-4 stroke-[2.4]" />
-              </div>
+              <img
+                src="/tandara-logo.jpeg"
+                alt="Tandara"
+                className="h-7 w-7 rounded-lg object-cover"
+              />
               <span className="text-lg font-bold tracking-tight text-slate-900">
                 TANDARA
               </span>
@@ -95,6 +97,15 @@ export const Footer: React.FC = () => {
                     className="hover:text-indigo-600 transition-colors"
                   >
                     Ekosistem
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#tim"
+                    onClick={(e) => handleNavClick(e, '#tim')}
+                    className="hover:text-indigo-600 transition-colors"
+                  >
+                    Tim
                   </a>
                 </li>
                 <li>
